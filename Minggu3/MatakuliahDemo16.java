@@ -29,11 +29,13 @@ public class MatakuliahDemo16 {
         }
 
         for (int i = 0; i < arrMatkul.length; i++) {
+            // System.out.println("Mata Kuliah ke-" + (i + 1));
+            // System.out.println("Kode: " + arrMatkul[i].kode);
+            // System.out.println("Nama: " + arrMatkul[i].nama);
+            // System.out.println("SKS: " + arrMatkul[i].sks);
+            // System.out.println("Jumlah Jam: " + arrMatkul[i].jumlahJam);
             System.out.println("Mata Kuliah ke-" + (i + 1));
-            System.out.println("Kode: " + arrMatkul[i].kode);
-            System.out.println("Nama: " + arrMatkul[i].nama);
-            System.out.println("SKS: " + arrMatkul[i].sks);
-            System.out.println("Jumlah Jam: " + arrMatkul[i].jumlahJam);
+            arrMatkul[i].cetakInfo();
             System.out.println("---------------------------");
         }
     }

@@ -19,4 +19,11 @@ public class Matakuliah16 {
         this.jumlahJam = jumlahJam;
         System.out.println("Data berhasil ditambahkan!");
     }
+
+    public void cetakInfo() {
+        System.out.println("Kode: " + kode);
+        System.out.println("Nama: " + nama);
+        System.out.println("SKS: " + sks);
+        System.out.println("Jumlah Jam: " + jumlahJam);
+    }
 }
