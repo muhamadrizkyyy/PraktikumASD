@@ -22,7 +22,9 @@ public class MatakuliahDemo16 {
             dummy = sc.nextLine();
             jumlahJam = Integer.parseInt(dummy);
 
-            arrMatkul[i] = new Matakuliah16(kode, nama, sks, jumlahJam);
+            arrMatkul[i] = new Matakuliah16();
+            System.out.println("---------------------------");
+            arrMatkul[i].tambahData(kode, nama, sks, jumlahJam);
             System.out.println("---------------------------");
         }
 
