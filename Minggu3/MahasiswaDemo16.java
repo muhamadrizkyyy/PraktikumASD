@@ -56,11 +56,13 @@ public class MahasiswaDemo16 {
         // System.out.println("---------------------------");
 
         for (int i = 0; i < arrMhs.length; i++) {
-            System.out.println("Data mahasiswa ke-" + (i + 1));
-            System.out.println("NIM    : " + arrMhs[i].nim);
-            System.out.println("Nama   : " + arrMhs[i].nama);
-            System.out.println("Kelas  : " + arrMhs[i].kelas);
-            System.out.println("IPK    : " + arrMhs[i].ipk);
+            // System.out.println("Data mahasiswa ke-" + (i + 1));
+            // System.out.println("NIM    : " + arrMhs[i].nim);
+            // System.out.println("Nama   : " + arrMhs[i].nama);
+            // System.out.println("Kelas  : " + arrMhs[i].kelas);
+            // System.out.println("IPK    : " + arrMhs[i].ipk);
+            // System.out.println("---------------------------");
+            arrMhs[i].cetakInfo();
             System.out.println("---------------------------");
         }
     }
