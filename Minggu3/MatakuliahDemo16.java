@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class MatakuliahDemo16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Matakuliah16 arrMatkul[] = new Matakuliah16[3];
+
+        System.out.println("Masukkan jumlah matakuliah: ");
+        int matkul = sc.nextInt();
+
+        Matakuliah16 arrMatkul[] = new Matakuliah16[matkul];
         String kode, nama, dummy;
         int sks, jumlahJam;
 
