@@ -36,10 +36,10 @@ public class MahasiswaBerprestasi16 {
     }
 
     void selectionSort() {
-        for (int k = 0; k < listMhs.length; k++) {
-            System.out.print(listMhs[k].ipk + " ");
-        }
-        System.out.println();
+        // for (int k = 0; k < listMhs.length; k++) {
+        // System.out.print(listMhs[k].ipk + " ");
+        // }
+        // System.out.println();
 
         for (int i = 0; i < listMhs.length - 1; i++) {
             int idxmin = i;
@@ -48,16 +48,34 @@ public class MahasiswaBerprestasi16 {
                     idxmin = j;
                 }
             }
-            
+
             Mahasiswa16 mhsTmp = listMhs[i];
             listMhs[i] = listMhs[idxmin];
             listMhs[idxmin] = mhsTmp;
 
             // // print sorting tiap perubahan
             // for (int k = 0; k < listMhs.length; k++) {
-            //     System.out.print(listMhs[k].ipk + " ");
+            // System.out.print(listMhs[k].ipk + " ");
             // }
             // System.out.println();
+        }
+    }
+
+    void insertionSort() {
+        // for (int k = 0; k < listMhs.length; k++) {
+        //     System.out.print(listMhs[k].ipk + " ");
+        // }
+        // System.out.println();
+
+        for (int i = 1; i < listMhs.length - 1; i++) {
+            Mahasiswa16 mhstmp = listMhs[i];
+            int j = i - 1;
+            while (j > -1 && listMhs[j].ipk < mhstmp.ipk) {
+                listMhs[j + 1] = listMhs[j];
+                j--;
+            }
+
+            listMhs[j + 1] = mhstmp;
         }
     }
 }

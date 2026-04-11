@@ -42,7 +42,8 @@ public class MahasiswaDemo16 {
         System.out.println();
         System.out.println("Data setelah disorting (ASC)");
         // list.bubbleSort();
-        list.selectionSort();
+        // list.selectionSort();
+        list.insertionSort();
         System.out.println("=======================================");
         list.tampil();
     }
