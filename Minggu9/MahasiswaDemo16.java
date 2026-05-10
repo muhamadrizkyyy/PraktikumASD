@@ -8,7 +8,8 @@ public class MahasiswaDemo16 {
         System.out.println("3. Melihat Tugas Teratas");
         System.out.println("4. Melihat Tugas Terawal");
         System.out.println("5. Melihat Daftar Tugas");
-        System.out.println("6. Keluar");
+        System.out.println("7. Jumlah Tugas Ternilai");
+        System.out.println("8. Keluar");
         System.out.print("Pilih Menu : ");
     }
 
@@ -62,7 +63,15 @@ public class MahasiswaDemo16 {
                     System.out.println("Daftar Tugas");
                     stack.print();
                     break;
-                case 6:
+                case 7:
+                    int ternilai = stack.completedTask();
+                    if (ternilai > 0) {
+                        System.out.printf("%d tugas telah ternilai\n" , ternilai);
+                    } else {
+                        System.out.println("Belum ada tugas yang ternilai");
+                    }
+                    break;
+                case 8:
                     System.out.println("Terima Kasih");
                     menu = false;
                     break;

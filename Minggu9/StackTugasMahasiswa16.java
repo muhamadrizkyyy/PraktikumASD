@@ -1,6 +1,6 @@
 public class StackTugasMahasiswa16 {
     Mahasiswa16[] stack;
-    int top, size;
+    int top, size, completed = 0;
 
     public StackTugasMahasiswa16() {
 
@@ -41,6 +41,7 @@ public class StackTugasMahasiswa16 {
         if (!isEmpty()) {
             Mahasiswa16 mhs = stack[top];
             top--;
+            completed++;
             return mhs;
         } else {
             System.out.println("Stack Kosong");
@@ -75,5 +76,9 @@ public class StackTugasMahasiswa16 {
         } else {
             System.out.println("Stack Kosong");
         }
+    }
+
+    public int completedTask() {
+        return completed;
     }
 }
