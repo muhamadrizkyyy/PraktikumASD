@@ -6,8 +6,9 @@ public class MahasiswaDemo16 {
         System.out.println("1. Mengumpulkan Tugas");
         System.out.println("2. Menilai Tugas");
         System.out.println("3. Melihat Tugas Teratas");
-        System.out.println("4. Melihat Daftar Tugas");
-        System.out.println("5. Keluar");
+        System.out.println("4. Melihat Tugas Terawal");
+        System.out.println("5. Melihat Daftar Tugas");
+        System.out.println("6. Keluar");
         System.out.print("Pilih Menu : ");
     }
 
@@ -52,10 +53,16 @@ public class MahasiswaDemo16 {
                     }
                     break;
                 case 4:
+                    Mahasiswa16 showfirst = stack.firstData();
+                    if (showfirst != null) {
+                        System.out.printf("Tugas Terawal: %s\n", showfirst.nama);
+                    }
+                    break;
+                case 5:
                     System.out.println("Daftar Tugas");
                     stack.print();
                     break;
-                case 5:
+                case 6:
                     System.out.println("Terima Kasih");
                     menu = false;
                     break;

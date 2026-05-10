@@ -58,6 +58,15 @@ public class StackTugasMahasiswa16 {
         }
     }
 
+    public Mahasiswa16 firstData() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("Stack Kosong");
+            return null;
+        }
+    }
+
     public void print() {
         if (!isEmpty()) {
             for (int i = top; i >= 0; i--) {
