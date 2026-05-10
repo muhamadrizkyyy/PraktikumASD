@@ -80,7 +80,7 @@ public class StackTugasMahasiswa16 {
 
     public String cvToBiner(int nilai) {
         StackKonversi16 stack = new StackKonversi16();
-        while (nilai > 0) {
+        while (nilai != 0) {
             int sisa = nilai % 2;
             stack.push(sisa);
             nilai = nilai / 2;
