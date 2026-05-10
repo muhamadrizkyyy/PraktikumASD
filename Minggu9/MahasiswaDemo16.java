@@ -45,6 +45,8 @@ public class MahasiswaDemo16 {
                         int nilai = sc.nextInt();
                         dinilai.nilai = nilai;
                         System.out.printf("Tugas %s berhasil di nilai %d \n", dinilai.nama, nilai);
+                        String nilaiBiner = stack.cvToBiner(nilai);
+                        System.out.printf("Nilai Biner: %s\n", nilaiBiner);
                     }
                     break;
                 case 3:
