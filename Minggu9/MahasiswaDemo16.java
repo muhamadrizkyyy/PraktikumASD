@@ -42,7 +42,7 @@ public class MahasiswaDemo16 {
                         System.out.print("Masukkan Nilai: ");
                         int nilai = sc.nextInt();
                         dinilai.nilai = nilai;
-                        System.out.printf("Tugas %s berhasil di nilai\n", dinilai.nama);
+                        System.out.printf("Tugas %s berhasil di nilai %d \n", dinilai.nama, nilai);
                     }
                     break;
                 case 3:
