@@ -86,4 +86,4 @@ public class SLLMain16 {
         sll.removeAt(0);
         sll.print();
     }
-}2
+}
