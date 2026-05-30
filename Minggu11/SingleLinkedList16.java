@@ -108,4 +108,113 @@ public class SingleLinkedList16 {
         }
     }
 
+    public void getDataAt(int index) {
+        if (index < 0) {
+            System.out.println("incorrect index!");
+        } else {
+            Node16 temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                if (temp.next == null) {
+                    System.out.println("index melebihi batas linked list, index terakhir : " + i);
+                }
+                temp = temp.next;
+            }
+            temp.data.tampilInformasi();
+        }
+    }
+
+    public int indexOf(String key) {
+        Node16 temp = head;
+        int index = 0;
+        while (temp != null && !temp.data.nama.equalsIgnoreCase(key)) {
+            index++;
+            temp = temp.next;
+        }
+        
+        if (temp == null) {
+            return -1;
+        } else {
+            return index;
+        }
+    }
+
+    public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked List is empty, cannot remove first node");
+        } else if (head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            System.out.println("First Node has been removed");
+        }
+    }
+
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("Linked List is empty, cannot remove last node");
+        } else if (head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            Node16 temp = head;
+            while (temp.next != tail) {
+                temp = temp.next;
+            }
+
+            tail = temp;
+            tail.next = null;
+            System.out.println("Last Node has been removed");
+        }
+    }
+
+    public void remove(String key) {
+        if (isEmpty()) {
+            System.out.println("Linked List is empty, cannot remove this node!");
+        } else {
+            Node16 temp = head;
+            Node16 keyNode, nextKeyNode;
+
+            while (temp.next != null) {
+                if (temp.data.nama.equalsIgnoreCase(key) && temp == head) {
+                    this.removeFirst();
+                } else if (temp.data.nama.equalsIgnoreCase(key) && temp.next == tail) {
+                    this.removeLast();
+                } else if (temp.data.nama.equalsIgnoreCase(key)) {
+                    keyNode = temp; // ambil node yang memiliki key
+                    nextKeyNode = keyNode.next.next; // ambil 2 node selanjutnya dari node yang memiliki key
+                    keyNode.next = nextKeyNode; // menghubungkan node sebelum node yang memiliki key dengan node
+                    break;
+                }
+
+                temp = temp.next;
+            }
+        }
+    }
+
+    public void removeAt(int index) {
+        if (isEmpty()) {
+            System.out.println("Linked List is empty, cannot remove this node!");
+        } else {
+            if (index < 0) {
+                System.out.println("incorrect index!");
+            } else if (index == 0) {
+                this.removeFirst();
+            } else {
+                Node16 temp = head;
+                for (int i = 0; i < index - 1; i++) {
+                    if (temp.next == null) {
+                        System.out.println("index melebihi batas linked list, index terakhir : " + i);
+                        index = i+1;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (temp.next != null) {
+                    temp.next = temp.next.next;
+                }
+            }
+        }
+    }
+
 }

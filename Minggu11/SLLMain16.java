@@ -26,53 +26,64 @@ public class SLLMain16 {
         Mahasiswa16 mhs4 = new Mahasiswa16("2544", "Dedi", "SI-A", 3.6);
 
         // sll.print();
-        // sll.addFirst(mhs4);
+        sll.addFirst(mhs4);
         // sll.print();
-        // sll.addLast(mhs1);
+        sll.addLast(mhs1);
         // sll.print();
-        // sll.insertAfter(mhs3, "dedi");
+        sll.insertAfter(mhs3, "dedi");
         // sll.print();
-        // sll.insertAt(mhs2, 10);
+        sll.insertAt(mhs2, 10);
         // sll.print();
 
         
-        int pilihan;
-        do {
-            System.out.println("1. Add First");
-            System.out.println("2. Add Last");
-            System.out.println("3. Add After");
-            System.out.println("4. Add At");
-            System.out.println("5. Print");
-            System.out.println("0. Exit");
-            System.out.print("Pilihan: ");
-            pilihan = sc.nextInt();
-            switch (pilihan) {
-                case 1:
-                    sll.addFirst(formMhs());
-                    break;
-                case 2:
-                    sll.addLast(formMhs());
-                    break;
-                case 3:
-                    System.out.print("Nama: ");
-                    String nama = sc.next();
-                    sll.insertAfter(formMhs(), nama);
-                    break;
-                case 4:
-                    System.out.print("Index: ");
-                    int index = sc.nextInt();
-                    sll.insertAt(formMhs(), index);
-                    break;
-                case 5:
-                    sll.print();
-                    break;
-                case 0:
-                    System.out.println("Bye!");
-                    break;
-                default:
-                    System.out.println("Pilihan tidak valid!");
-                    break;
-            }
-        } while (pilihan != 0);
+        // int pilihan;
+        // do {
+        //     System.out.println("1. Add First");
+        //     System.out.println("2. Add Last");
+        //     System.out.println("3. Add After");
+        //     System.out.println("4. Add At");
+        //     System.out.println("5. Print");
+        //     System.out.println("0. Exit");
+        //     System.out.print("Pilihan: ");
+        //     pilihan = sc.nextInt();
+        //     switch (pilihan) {
+        //         case 1:
+        //             sll.addFirst(formMhs());
+        //             break;
+        //         case 2:
+        //             sll.addLast(formMhs());
+        //             break;
+        //         case 3:
+        //             System.out.print("Nama: ");
+        //             String nama = sc.next();
+        //             sll.insertAfter(formMhs(), nama);
+        //             break;
+        //         case 4:
+        //             System.out.print("Index: ");
+        //             int index = sc.nextInt();
+        //             sll.insertAt(formMhs(), index);
+        //             break;
+        //         case 5:
+        //             sll.print();
+        //             break;
+        //         case 0:
+        //             System.out.println("Bye!");
+        //             break;
+        //         default:
+        //             System.out.println("Pilihan tidak valid!");
+        //             break;
+        //     }
+        // } while (pilihan != 0);
+        sll.print();
+        System.out.println();
+
+        System.out.println("Data index 1: ");
+        sll.getDataAt(1);
+        System.out.println("Index dari Budi: " + sll.indexOf("Budi"));
+        sll.removeFirst();
+        sll.removeLast();
+        sll.remove("Cindy");
+        sll.removeAt(0);
+        sll.print();
     }
-}
+}2
